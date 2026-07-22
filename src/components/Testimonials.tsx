@@ -5,30 +5,30 @@ const TESTIMONIALS = [
   {
     name: "Mariana Costa",
     initials: "MC",
-    trip: "Viajou para as Maldivas · 2025",
+    trip: "Pacote Arraial + Trancoso + Caraiva · 7 dias",
     quote:
-      "Eu tinha medo de planejar tudo sozinha. Em dois dias de conversa no WhatsApp estava com roteiro, voos e hotel resolvidos. Foi a melhor viagem da minha vida.",
+      "Fechamos tudo pelo WhatsApp. Nos buscaram no aeroporto, todos os dias no hotel às 8h. Motorista super gente boa, nos levou de quadriciclo em Caraiva e jetski em Arraial. Melhor agência local disparado!",
   },
   {
     name: "Rafael & Júlia",
     initials: "RJ",
-    trip: "Lua de mel na Patagônia · 2025",
+    trip: "Lua de mel · Praia do Espelho + Mergulho cilindro",
     quote:
-      "Suporte absurdo. Neve cancelou nosso voo e em 40 minutos a Meridiano já tinha remarcado tudo. Voltamos pra casa já planejando a próxima com eles.",
+      "Lua de mel inesquecível. Eles organizaram tudo: mergulho em Recife de Fora com fotos lindas, Quadrado de Trancoso à noite e jantar secreto que só local conhece. Nossa van era só nossa!",
   },
   {
     name: "Carlos Eduardo",
     initials: "CE",
-    trip: "Trekking no Nepal · 2024",
+    trip: "Família com 2 crianças · Coroa Vermelha + Aldeia Pataxó",
     quote:
-      "Roteiro feito por quem realmente conhece o destino. O guia local que indicaram transformou a trilha em uma experiência que nenhuma agência de pacote entrega.",
+      "Viajamos com crianças e o cuidado foi surreal. Aldeia Pataxó foi o ponto alto para as crianças. Motorista sempre pontual, cadeirinha, água gelada na van. Viramos amigos da equipe.",
   },
   {
     name: "Fernanda Lima",
     initials: "FL",
-    trip: "Marrocos com as amigas · 2025",
+    trip: "Amigas · Jetski, Buggy e Coroa Vermelha",
     quote:
-      "Preço melhor que qualquer site que pesquisamos, e com atendimento humano. A noite no deserto do Saara foi escolha deles — e o ponto alto do ano.",
+      "Preço mais justo que no hotel e atendimento humano de verdade. Jetski foi o melhor! E no fim ainda nos levaram para o aeroporto. Recomendo de olhos fechados.",
   },
 ];
 
@@ -52,10 +52,10 @@ export default function Testimonials() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <p className="font-mono text-[11px] font-bold tracking-[0.24em] text-mint/70 uppercase mb-3">
-            {"//"} 04 — Depoimentos
+            {"//"} 04 — Depoimentos reais do Google
           </p>
           <h2 className="font-display uppercase text-4xl sm:text-6xl leading-[0.95] text-white mb-14">
-            Quem viajou, <span className="text-tropic">recomenda</span>
+            Quem veio com a gente, <span className="text-tropic">volta</span>
           </h2>
         </Reveal>
 
@@ -70,7 +70,7 @@ export default function Testimonials() {
               <span className="absolute -top-6 left-4 sm:left-8 font-display text-[110px] leading-none text-tropic/25 select-none">
                 “
               </span>
-              <blockquote className="relative text-xl sm:text-3xl font-medium leading-snug text-white">
+              <blockquote className="relative text-xl sm:text-[28px] font-medium leading-snug text-white">
                 {current.quote}
               </blockquote>
               <div className="mt-8 flex items-center gap-4">

@@ -1,46 +1,53 @@
 import Reveal from "./Reveal";
+import { wa } from "../data/site";
 
 const SERVICES = [
   {
-    title: "Roteiros sob medida",
-    desc: "Nada de pacote engessado: desenhamos a viagem em volta do seu estilo, ritmo e orçamento.",
+    title: "Passeio de Jetski",
+    desc: "Jetski Yamaha novo, colete e guia. Roteiro pelo Rio João de Tiba e mar de Arraial. 30min, 1h ou free. Fotos de drone opcionais.",
+    tag: "Adrenalina",
     icon: (
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
     ),
   },
   {
-    title: "Passagens aéreas",
-    desc: "Tarifas negociadas em companhias nacionais e internacionais, com bloqueio de preço e parcelamento.",
-    icon: (
-      <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-    ),
-  },
-  {
-    title: "Hospedagem selecionada",
-    desc: "Hotéis, resorts e pousadas testados pela nossa equipe — do charmoso ao cinco estrelas.",
-    icon: (
-      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
-    ),
-  },
-  {
-    title: "Seguro viagem",
-    desc: "Cobertura internacional completa com assistência médica, extravio de bagagem e cancelamento.",
-    icon: (
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-    ),
-  },
-  {
-    title: "Translados & passeios",
-    desc: "Do aeroporto ao hotel, e do hotel aos melhores mirantes — com guias locais que falam português.",
+    title: "Quadriciclo & Buggy",
+    desc: "Trilhas por Trancoso, Caraiva e Praia do Espelho. Quadri 4x4 automático e buggys com motorista. Rota das falésias + mirantes secretos.",
+    tag: "Mais alugado",
     icon: (
       <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
     ),
   },
   {
-    title: "Vistos & documentação",
-    desc: "Orientação completa sobre vistos, vacinas, passaporte e exigências de cada país. Sem sustos no embarque.",
+    title: "Mergulho com cilindro",
+    desc: "Recife de Fora e Coroa Alta. Equipamento completo, instrutor PADI, lancha rápida e fotos subaquáticas inclusas. Batismo para iniciantes.",
+    tag: "Alto mar",
     icon: (
-      <path strokeLinecap="round" strokeLinejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+    ),
+  },
+  {
+    title: "Visita Aldeia Pataxó",
+    desc: "Imersão cultural em Coroa Vermelha. Danças, pinturas, artesanato direto das artesãs e conversa com cacique. Guia indígena local.",
+    tag: "Cultural",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+    ),
+  },
+  {
+    title: "Lancha privativa & Chalana",
+    desc: "Passeio de lancha exclusiva saindo de Arraial ou Caraiva. Som, churrasco a bordo opcional, paradas em ilhas e Recife de Fora.",
+    tag: "Privativo",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z M6 6h.008v.008H6V6z" />
+    ),
+  },
+  {
+    title: "Transfer aeroporto + motoristas",
+    desc: "Nossa frota própria: vans executivas, SW4 4x4, buggys. Motoristas com Cadastur, uniformizados, que te buscam no hotel e te levam de volta todo dia.",
+    tag: "Incluso",
+    icon: (
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
     ),
   },
 ];
@@ -54,23 +61,42 @@ export default function Services() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
           <p className="font-mono text-[11px] font-bold tracking-[0.24em] text-tropic uppercase mb-3">
-            {"//"} 03 — Experiências
+            {"//"} 03 — Experiências + Frota
           </p>
           <h2 className="font-display uppercase text-4xl sm:text-6xl leading-[0.95] text-white mb-4">
-            A gente resolve,
+            Muito além da praia,
             <br />
-            <span className="text-hollow-azure">você viaja.</span>
+            <span className="text-hollow-azure">é sobre viver.</span>
           </h2>
-          <p className="text-gray-400 max-w-xl mb-14">
-            Cada detalhe da viagem passa pelas mãos de um consultor de verdade. É assim que
-            embarques viram histórias.
+          <p className="text-gray-400 max-w-2xl mb-6 text-[15px] leading-relaxed">
+            Jetski, quadriciclo, mergulho com cilindro, aldeias Pataxó, lancha privativa... Tudo com nossa equipe própria: motoristas, veículos, equipamentos e guias locais. Você fecha no WhatsApp e a gente resolve.
           </p>
+
+          <div className="mb-12 grid sm:grid-cols-3 gap-3 max-w-3xl">
+            <div className="border border-tropic/20 bg-tropic/5 rounded-sm px-4 py-3 flex items-center gap-2.5">
+              <span className="text-tropic">✔</span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-white font-bold">Veículos próprios 4x4 & vans</span>
+            </div>
+            <div className="border border-tropic/20 bg-tropic/5 rounded-sm px-4 py-3 flex items-center gap-2.5">
+              <span className="text-tropic">✔</span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-white font-bold">Motoristas com Cadastur</span>
+            </div>
+            <div className="border border-tropic/20 bg-tropic/5 rounded-sm px-4 py-3 flex items-center gap-2.5">
+              <span className="text-tropic">✔</span>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-white font-bold">Busca no hotel ida e volta</span>
+            </div>
+          </div>
         </Reveal>
 
         <div className="border-t border-white/10">
           {SERVICES.map((s, i) => (
             <Reveal key={s.title} delay={i * 70}>
-              <div className="group grid sm:grid-cols-[70px_56px_1fr_1.4fr_auto] items-center gap-4 sm:gap-8 py-7 px-2 sm:px-5 border-b border-white/10 hover:bg-white/5 transition-colors duration-300">
+              <a
+                href={wa(`Olá! Quero adicionar ${s.title} no meu pacote 🌴 Pode me mandar valores?`)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group grid sm:grid-cols-[70px_56px_1fr_1.6fr_auto] items-center gap-4 sm:gap-8 py-7 px-2 sm:px-5 border-b border-white/10 hover:bg-white/5 transition-colors duration-300"
+              >
                 <span className="font-display text-2xl text-white/20 group-hover:text-tropic/50 transition-colors">
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -79,17 +105,35 @@ export default function Services() {
                     {s.icon}
                   </svg>
                 </span>
-                <h3 className="font-display uppercase text-xl sm:text-2xl text-white group-hover:translate-x-1.5 transition-transform duration-300">
-                  {s.title}
-                </h3>
+                <div>
+                  <h3 className="font-display uppercase text-[20px] sm:text-[22px] text-white group-hover:translate-x-1.5 transition-transform duration-300 leading-none">
+                    {s.title}
+                  </h3>
+                  <span className="mt-1 inline-block font-mono text-[9px] tracking-widest uppercase bg-white/10 border border-white/10 text-tropic px-2 py-0.5 rounded-full">{s.tag}</span>
+                </div>
                 <p className="text-sm text-gray-400 leading-relaxed">{s.desc}</p>
                 <svg className="hidden sm:block w-5 h-5 text-white/25 group-hover:text-tropic group-hover:translate-x-2 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
-              </div>
+              </a>
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={100}>
+          <div className="mt-10 p-6 sm:p-8 rounded-sm border border-tropic/20 bg-gradient-to-br from-tropic/10 to-transparent flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div>
+              <p className="font-display uppercase text-2xl text-white leading-none">Quer fechar pacote com motorista exclusivo?</p>
+              <p className="font-mono text-[11px] text-gray-400 uppercase tracking-widest mt-2">Van ou SW4 só pra sua família durante toda estadia + roteiro personalizado</p>
+            </div>
+            <a href={wa("Olá! Quero fechar pacote PREMIUM com motorista exclusivo + van/SW4 só pra minha família durante toda a estadia 🚐🌴")} target="_blank" rel="noopener noreferrer" className="shrink-0 inline-flex items-center gap-2 rounded-full bg-tropic text-abyss font-bold px-6 py-3.5 hover:bg-white transition-colors">
+              Pedir orçamento premium
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
