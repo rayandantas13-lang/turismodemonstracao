@@ -21,10 +21,17 @@ body {
   background: var(--color-abyss);
   color: #fff;
   font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+@media (max-width: 639px) {
+  body {
+    padding-bottom: 80px;
+  }
 }
 
 section[id] {
-  scroll-margin-top: 92px;
+  scroll-margin-top: 104px;
 }
 
 ::selection {

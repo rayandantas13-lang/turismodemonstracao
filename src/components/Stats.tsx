@@ -52,12 +52,21 @@ export default function Stats() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4">
           {STATS.map((s, i) => (
-            <Reveal key={s.label} delay={i * 90} className={i > 0 ? "border-l border-dashed border-white/15" : ""}>
-              <div className="py-12 px-6 sm:px-10">
+            <Reveal
+              key={s.label}
+              delay={i * 90}
+              className={
+                "border-dashed border-white/15 " +
+                (i > 0 && i % 2 !== 0 ? "border-l " : "") +
+                (i >= 2 ? "border-t sm:border-t-0 " : "") +
+                (i >= 2 && i % 2 === 0 ? "sm:border-l " : "")
+              }
+            >
+              <div className="py-10 sm:py-12 px-4 sm:px-10">
                 <div className="font-display text-4xl sm:text-5xl text-tropic leading-none">
                   <Counter to={s.value} suffix={s.suffix} />
                 </div>
-                <p className="mt-3 font-mono text-[10px] tracking-[0.2em] uppercase text-gray-400">
+                <p className="mt-3 font-mono text-[9.5px] sm:text-[10px] tracking-[0.16em] sm:tracking-[0.2em] uppercase text-gray-400 leading-relaxed">
                   {s.label}
                 </p>
               </div>

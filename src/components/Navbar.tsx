@@ -11,19 +11,19 @@ const links = [
 
 function Logo() {
   return (
-    <a href="#topo" className="flex items-center gap-3 group">
-      <span className="relative flex items-center justify-center w-9 h-9">
-        <svg className="w-9 h-9 text-tropic group-hover:rotate-180 transition-transform duration-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+    <a href="#topo" className="flex items-center gap-2 sm:gap-3 group min-w-0">
+      <span className="relative flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 shrink-0">
+        <svg className="w-8 h-8 sm:w-10 sm:h-10 text-tropic group-hover:rotate-180 transition-transform duration-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
           <circle cx="12" cy="12" r="9.2" />
           <ellipse cx="12" cy="12" rx="4.2" ry="9.2" />
           <path d="M3.5 9.5h17M3.5 14.5h17" />
         </svg>
       </span>
-      <span className="leading-none">
-        <span className="block font-display text-[19px] tracking-wide text-white">
+      <span className="flex flex-col justify-center leading-none min-w-0">
+        <span className="block font-display text-[17px] sm:text-[20px] tracking-wide text-white leading-none">
           MERIDIANO<span className="text-tropic">.</span>
         </span>
-        <span className="block font-mono text-[8.5px] tracking-[0.22em] text-gray-400 uppercase mt-1">
+        <span className="block font-mono text-[7.5px] sm:text-[8.5px] tracking-[0.14em] sm:tracking-[0.22em] text-gray-400 uppercase mt-[5px] leading-tight whitespace-nowrap">
           Costa do Descobrimento · local
         </span>
       </span>
@@ -37,7 +37,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-abyss/90 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-[72px]">
+        <div className="flex items-center justify-between h-[76px] sm:h-[84px]">
           <Logo />
 
           <nav className="hidden lg:flex items-center gap-7">

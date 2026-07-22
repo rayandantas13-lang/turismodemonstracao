@@ -82,8 +82,8 @@ export default function Footer() {
                   WhatsApp {WHATSAPP_DISPLAY}
                 </a>
               </li>
-              <li>
-                <a href={`mailto:${EMAIL}`} className="hover:text-tropic transition-colors">
+              <li className="break-all">
+                <a href={`mailto:${EMAIL}`} className="hover:text-tropic transition-colors break-all">
                   {EMAIL}
                 </a>
               </li>
@@ -97,11 +97,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="font-mono text-[10px] tracking-[0.14em] text-gray-500 uppercase">
+        <div className="border-t border-white/10 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <p className="font-mono text-[9.5px] sm:text-[10px] tracking-[0.12em] sm:tracking-[0.14em] text-gray-500 uppercase leading-relaxed">
             © {new Date().getFullYear()} Meridiano Costa do Descobrimento · CNPJ 12.345.678/0001-90 · Todos passeios fechados via WhatsApp
           </p>
-          <p className="font-mono text-[10px] tracking-[0.14em] text-gray-500 uppercase">
+          <p className="font-mono text-[9.5px] sm:text-[10px] tracking-[0.12em] sm:tracking-[0.14em] text-gray-500 uppercase whitespace-nowrap">
             Porto Seguro — Bahia <span className="text-tropic">✈</span> Jetski · Buggy · Mergulho · Aldeia Pataxó
           </p>
         </div>

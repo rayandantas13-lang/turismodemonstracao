@@ -12,13 +12,13 @@ const OFFERS = [
 export default function Ticker() {
   const items = [...OFFERS, ...OFFERS];
   return (
-    <div className="relative z-10 -mt-6 rotate-[-1.2deg] scale-x-105">
+    <div className="relative z-10 -mt-6 rotate-[-1.2deg] overflow-hidden">
       <div className="bg-tropic border-y-2 border-abyss overflow-hidden">
         <div className="flex w-max animate-marquee py-3">
           {items.map((offer, i) => (
             <span
               key={i}
-              className="flex items-center gap-8 pr-8 font-display text-lg uppercase text-abyss whitespace-nowrap"
+              className="flex items-center gap-8 pr-8 font-display text-base sm:text-lg uppercase text-abyss whitespace-nowrap"
             >
               {offer}
               <svg className="w-4 h-4 text-abyss/70" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
