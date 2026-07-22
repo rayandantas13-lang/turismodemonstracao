@@ -1,5 +1,7 @@
 import Reveal from "./Reveal";
 import { wa } from "../data/site";
+import frotaCaminhonetes from "../assets/frota-caminhonetes-4x4.png";
+import jetskiQuadriciclo from "../assets/jetski-quadriciclo.png";
 
 const ITEMS = [
   {
@@ -11,13 +13,13 @@ const ITEMS = [
   {
     title: "Frota 4x4 & Vans executivas",
     desc: "SW4, Hilux, vans com ar, som bluetooth, seguro total. Cadeirinha baby se precisar. Lavadas todo dia.",
-    img: "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=700",
+    img: frotaCaminhonetes,
     badge: "Veículos novos",
   },
   {
     title: "Jetski · Buggy · Quadriciclo",
     desc: "Jetski Yamaha 2024, quadriciclo automático 4x4, buggys com motorista. Colete, briefing e guia o tempo todo.",
-    img: "https://images.pexels.com/photos/163236/luxury-yacht-boat-speed-water-163236.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=700",
+    img: jetskiQuadriciclo,
     badge: "Aventura segura",
   },
 ];
