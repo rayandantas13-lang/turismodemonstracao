@@ -133,7 +133,7 @@ export default function Destinations() {
           </div>
         </Reveal>
 
-        <div key={cat} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[340px] sm:auto-rows-[300px]">
+        <div key={cat} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[430px] sm:auto-rows-[390px]">
           {list.map((d, i) => (
             <a
               key={d.name}
@@ -161,24 +161,24 @@ export default function Destinations() {
                 {String(i + 1).padStart(2, "0")}
               </span>
 
-              <div className="absolute inset-x-0 bottom-0 p-5">
-                <h3 className="font-display uppercase text-[26px] sm:text-[32px] text-white leading-[0.95]">
+              <div className="absolute inset-x-0 bottom-0 p-5 text-center">
+                <h3 className="font-display uppercase text-[24px] sm:text-[28px] text-white leading-[1.02] break-words">
                   {d.name}
                 </h3>
-                <p className="mt-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-gray-200">
+                <p className="mt-1.5 font-mono text-[10px] tracking-[0.1em] uppercase text-gray-200">
                   {d.place}
                 </p>
                 <p className="mt-3 text-[13px] text-gray-300 leading-snug line-clamp-2">
                   {d.desc}
                 </p>
-                <div className="mt-3 flex flex-wrap gap-1.5">
+                <div className="mt-3 flex flex-wrap justify-center gap-1.5">
                   {d.highlights.map(h => (
                     <span key={h} className="font-mono text-[9px] uppercase tracking-widest border border-white/20 bg-white/5 text-white/80 px-2 py-1 rounded-full">{h}</span>
                   ))}
                 </div>
-                <div className="mt-4 flex items-end justify-between">
+                <div className="mt-4 flex items-end justify-center gap-4">
                   <div>
-                    <span className="block font-mono text-[9px] tracking-[0.16em] uppercase text-gray-400">
+                    <span className="block font-mono text-[9px] tracking-[0.12em] uppercase text-gray-400">
                       {d.days}
                     </span>
                     <span className="font-display text-xl text-tropic">{d.price}</span>
