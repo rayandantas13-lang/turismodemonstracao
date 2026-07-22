@@ -5,7 +5,7 @@ const WORDS = ["ARRAIAL", "TRANCOSO", "CARAIVA", "COROA VERMELHA"];
 
 function BoardingPass() {
   return (
-    <div className="absolute -bottom-10 -left-4 sm:-left-10 w-[300px] sm:w-[320px] bg-mint text-[#0b2233] rounded-md shadow-2xl shadow-black/50 rotate-[-3deg] animate-floaty">
+    <div className="absolute -bottom-10 left-2 sm:-left-10 w-[280px] sm:w-[320px] max-w-[92vw] bg-mint text-[#0b2233] rounded-md shadow-2xl shadow-black/50 rotate-[-3deg] animate-floaty">
       <div className="px-5 pt-4 pb-3 flex items-center justify-between">
         <span className="font-display text-base tracking-wide">
           MERIDIANO<span className="text-ocean"> TOUR</span>
@@ -82,9 +82,9 @@ export default function Hero() {
         <div className="grid lg:grid-cols-12 gap-14 items-center">
           {/* Left */}
           <div className="lg:col-span-7 space-y-7">
-            <div className="flex items-center gap-3 font-mono text-[11px] font-bold tracking-[0.22em] text-tropic uppercase">
-              <span className="w-2.5 h-2.5 bg-tropic animate-pulse" />
-              Agência local em Porto Seguro · Costa do Descobrimento
+            <div className="flex items-start sm:items-center gap-3 font-mono text-[10px] sm:text-[11px] font-bold tracking-[0.18em] sm:tracking-[0.22em] text-tropic uppercase leading-tight">
+              <span className="w-2.5 h-2.5 mt-[3px] sm:mt-0 bg-tropic animate-pulse shrink-0" />
+              <span>Agência local em Porto Seguro · Costa do Descobrimento</span>
             </div>
 
             <h1 className="font-display uppercase leading-[0.92] text-[clamp(3rem,9vw,6.8rem)]">
@@ -140,7 +140,7 @@ export default function Hero() {
           </div>
 
           {/* Right — photo + boarding pass */}
-          <div className="lg:col-span-5 relative pl-6 pb-16 lg:pb-20 sm:pl-10">
+          <div className="lg:col-span-5 relative pl-4 sm:pl-10 pb-20 sm:pb-16 lg:pb-20 mt-6 lg:mt-0">
             <div className="relative overflow-hidden rounded-sm border border-white/15 rotate-1 hover:rotate-0 transition-transform duration-500">
               <img
                 src="https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1100&w=800"
@@ -151,12 +151,12 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-abyss/80 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <p className="font-mono text-[10px] tracking-[0.2em] text-white/80 uppercase">Arraial d'Ajuda — 07h12 · busca no hotel</p>
-                <p className="font-display text-2xl text-white uppercase leading-none mt-1">Translado + Guia Local + Passeios</p>
+                <p className="font-display text-xl sm:text-2xl text-white uppercase leading-none mt-1">Translado + Guia Local + Passeios</p>
               </div>
             </div>
 
-            <div className="absolute -top-6 left-0 sm:-left-4 w-24 h-24 rounded-full border-2 border-dashed border-tropic bg-abyss/80 backdrop-blur flex flex-col items-center justify-center text-center rotate-[-14deg]">
-              <span className="font-mono text-[9px] font-bold tracking-widest text-tropic leading-tight">
+            <div className="absolute top-2 right-2 sm:-top-6 sm:-left-4 w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-dashed border-tropic bg-abyss/80 backdrop-blur flex flex-col items-center justify-center text-center rotate-[-14deg] z-10">
+              <span className="font-mono text-[8px] sm:text-[9px] font-bold tracking-widest text-tropic leading-tight">
                 AGÊNCIA<br />100%<br />LOCAL 🌴
               </span>
             </div>

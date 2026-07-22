@@ -49,7 +49,7 @@ export default function Contact() {
       <div className="absolute top-1/4 left-[-10%] w-[380px] h-[380px] rounded-full bg-ocean/25 blur-[110px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-14 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           {/* Left — info */}
           <Reveal>
             <p className="font-mono text-[11px] font-bold tracking-[0.24em] text-tropic uppercase mb-3">
@@ -60,7 +60,7 @@ export default function Contact() {
               <br />
               <span className="text-hollow-azure">pacote no zap?</span>
             </h2>
-            <p className="text-gray-300 max-w-lg mb-8 leading-relaxed">
+            <p className="text-gray-300 max-w-lg mb-8 leading-relaxed text-[15px] sm:text-base">
               Somos agência 100% local em Porto Seguro. Nada de call center. Você fala direto com quem vai te buscar no aeroporto e te levar pra Arraial, Trancoso, Caraiva e Coroa Vermelha. Resposta em minutos.
             </p>
 
@@ -69,49 +69,49 @@ export default function Contact() {
                 href={wa("Olá! Quero fechar meu pacote em Porto Seguro 🌴✈️")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-5 p-5 border border-tropic/50 bg-tropic/10 rounded-sm hover:bg-tropic/20 hover:border-tropic transition-all duration-300"
+                className="group flex items-start sm:items-center gap-4 sm:gap-5 p-4 sm:p-5 border border-tropic/50 bg-tropic/10 rounded-sm hover:bg-tropic/20 hover:border-tropic transition-all duration-300"
               >
-                <span className="w-14 h-14 bg-tropic text-abyss flex items-center justify-center rounded-sm group-hover:rotate-6 transition-transform duration-300 shrink-0">
-                  <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                <span className="w-12 h-12 sm:w-14 sm:h-14 bg-tropic text-abyss flex items-center justify-center rounded-sm group-hover:rotate-6 transition-transform duration-300 shrink-0">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                   </svg>
                 </span>
-                <span className="flex-1">
-                  <span className="block font-display uppercase text-xl text-white">WhatsApp direto com guia</span>
-                  <span className="block font-mono text-xs text-tropic tracking-wider">
+                <span className="flex-1 min-w-0">
+                  <span className="block font-display uppercase text-lg sm:text-xl text-white leading-tight">WhatsApp direto com guia</span>
+                  <span className="block font-mono text-[10px] sm:text-xs text-tropic tracking-wider mt-1 break-words leading-relaxed">
                     {WHATSAPP_DISPLAY} · online agora - resposta em minutos
                   </span>
                 </span>
-                <svg className="w-5 h-5 text-gray-500 group-hover:text-tropic group-hover:translate-x-1.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                <svg className="hidden sm:block w-5 h-5 text-gray-500 group-hover:text-tropic group-hover:translate-x-1.5 transition-all shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </a>
 
               <a
                 href={`mailto:${EMAIL}`}
-                className="group flex items-center gap-5 p-5 border border-white/15 rounded-sm hover:border-azure transition-all duration-300"
+                className="group flex items-start sm:items-center gap-4 sm:gap-5 p-4 sm:p-5 border border-white/15 rounded-sm hover:border-azure transition-all duration-300 pr-20 sm:pr-5"
               >
-                <span className="w-14 h-14 border border-azure/50 text-azure flex items-center justify-center rounded-sm group-hover:bg-azure group-hover:text-white transition-all duration-300 shrink-0">
+                <span className="w-12 h-12 sm:w-14 sm:h-14 border border-azure/50 text-azure flex items-center justify-center rounded-sm group-hover:bg-azure group-hover:text-white transition-all duration-300 shrink-0">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                   </svg>
                 </span>
-                <span className="flex-1">
-                  <span className="block font-display uppercase text-xl text-white">E-mail</span>
-                  <span className="block font-mono text-xs text-gray-400 tracking-wider">{EMAIL}</span>
+                <span className="flex-1 min-w-0">
+                  <span className="block font-display uppercase text-lg sm:text-xl text-white leading-tight">E-mail</span>
+                  <span className="block font-mono text-[10px] sm:text-xs text-gray-400 tracking-wider break-all leading-relaxed">{EMAIL}</span>
                 </span>
               </a>
 
               <div className="grid sm:grid-cols-2 gap-4">
-                <div className="p-5 border border-white/15 rounded-sm">
+                <div className="p-4 sm:p-5 border border-white/15 rounded-sm">
                   <p className="font-mono text-[10px] tracking-[0.2em] text-gray-500 uppercase mb-2">Base local</p>
-                  <p className="text-sm text-gray-300 leading-relaxed">
+                  <p className="text-sm text-gray-300 leading-relaxed break-words">
                     Av. Beira Mar, 1000 · Arraial d'Ajuda
                     <br />
                     Porto Seguro — BA · Costa do Descobrimento
                   </p>
                 </div>
-                <div className="p-5 border border-white/15 rounded-sm">
+                <div className="p-4 sm:p-5 border border-white/15 rounded-sm">
                   <p className="font-mono text-[10px] tracking-[0.2em] text-gray-500 uppercase mb-2">Horário & Frota</p>
                   <p className="text-sm text-gray-300 leading-relaxed">
                     Seg–Dom · 7h às 22h
@@ -127,18 +127,18 @@ export default function Contact() {
           <Reveal delay={140}>
             <form
               onSubmit={handleSubmit}
-              className="relative bg-mint text-abyss rounded-sm shadow-2xl shadow-black/50 rotate-[0.6deg] hover:rotate-0 transition-transform duration-500"
+              className="relative bg-mint text-abyss rounded-sm shadow-2xl shadow-black/50 rotate-[0.6deg] hover:rotate-0 transition-transform duration-500 pb-24 sm:pb-0"
             >
-              <div className="px-6 sm:px-9 pt-7 pb-5 flex items-center justify-between">
-                <div>
-                  <p className="font-display text-lg tracking-wide">
+              <div className="px-5 sm:px-9 pt-6 sm:pt-7 pb-4 sm:pb-5 flex items-start sm:items-center justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="font-display text-lg sm:tracking-wide">
                     MERIDIANO<span className="text-ocean"> TOUR</span>
                   </p>
-                  <p className="font-mono text-[9px] font-bold tracking-[0.22em] text-ocean uppercase">
+                  <p className="font-mono text-[8.5px] sm:text-[9px] font-bold tracking-[0.18em] sm:tracking-[0.22em] text-ocean uppercase leading-tight mt-1 break-words">
                     Reserva de pacote - Costa do Descobrimento
                   </p>
                 </div>
-                <span className="font-mono text-[10px] font-bold text-abyss/50">BPS·{new Date().getFullYear()}</span>
+                <span className="font-mono text-[10px] font-bold text-abyss/50 shrink-0">BPS·{new Date().getFullYear()}</span>
               </div>
 
               <div className="relative border-t-2 border-dashed border-abyss/25">
@@ -146,7 +146,7 @@ export default function Contact() {
                 <span className="absolute -right-3 -top-3 w-6 h-6 rounded-full bg-abyss" />
               </div>
 
-              <div className="px-6 sm:px-9 py-7 space-y-5">
+              <div className="px-5 sm:px-9 py-6 sm:py-7 space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="c-name" className="block font-mono text-[10px] font-bold tracking-[0.18em] uppercase text-abyss/60 mb-2">
@@ -187,7 +187,7 @@ export default function Contact() {
                       id="c-dest"
                       value={form.destination}
                       onChange={(e) => setForm({ ...form, destination: e.target.value })}
-                      className={inputCls}
+                      className={`${inputCls} pr-8`}
                     >
                       {DESTINATION_OPTIONS.map((d) => (
                         <option key={d}>{d}</option>
@@ -202,7 +202,7 @@ export default function Contact() {
                       id="c-month"
                       value={form.month}
                       onChange={(e) => setForm({ ...form, month: e.target.value })}
-                      className={inputCls}
+                      className={`${inputCls} pr-8`}
                     >
                       <option value="">Ainda não decidi</option>
                       {MONTHS.map((m) => (
@@ -236,7 +236,7 @@ export default function Contact() {
                   </svg>
                 </button>
 
-                <p className="font-mono text-[9px] tracking-[0.14em] text-abyss/45 uppercase text-center">
+                <p className="font-mono text-[9px] tracking-[0.14em] text-abyss/45 uppercase text-center leading-relaxed">
                   * vai direto pro WhatsApp ({WHATSAPP_NUMBER}) - sem spam, atendimento humano local
                 </p>
               </div>

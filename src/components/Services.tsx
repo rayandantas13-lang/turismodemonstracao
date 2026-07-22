@@ -95,24 +95,30 @@ export default function Services() {
                 href={wa(`Olá! Quero adicionar ${s.title} no meu pacote 🌴 Pode me mandar valores?`)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group grid sm:grid-cols-[70px_56px_1fr_1.6fr_auto] items-center gap-4 sm:gap-8 py-7 px-2 sm:px-5 border-b border-white/10 hover:bg-white/5 transition-colors duration-300"
+                className="group relative grid grid-cols-[40px_48px_1fr] sm:grid-cols-[70px_56px_1fr_1.6fr_auto] items-start sm:items-center gap-3 sm:gap-8 py-6 sm:py-7 px-2 sm:px-5 border-b border-white/10 hover:bg-white/5 transition-colors duration-300"
               >
-                <span className="font-display text-2xl text-white/20 group-hover:text-tropic/50 transition-colors">
+                <span className="font-display text-xl sm:text-2xl text-white/20 group-hover:text-tropic/50 transition-colors pt-1 sm:pt-0">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="w-12 h-12 border border-tropic/40 text-tropic flex items-center justify-center rounded-sm group-hover:bg-tropic group-hover:text-abyss group-hover:rotate-6 transition-all duration-300">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.6">
+                <span className="w-11 h-11 sm:w-12 sm:h-12 border border-tropic/40 text-tropic flex items-center justify-center rounded-sm group-hover:bg-tropic group-hover:text-abyss group-hover:rotate-6 transition-all duration-300 shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.6">
                     {s.icon}
                   </svg>
                 </span>
-                <div>
-                  <h3 className="font-display uppercase text-[20px] sm:text-[22px] text-white group-hover:translate-x-1.5 transition-transform duration-300 leading-none">
-                    {s.title}
-                  </h3>
-                  <span className="mt-1 inline-block font-mono text-[9px] tracking-widest uppercase bg-white/10 border border-white/10 text-tropic px-2 py-0.5 rounded-full">{s.tag}</span>
+                <div className="sm:contents">
+                  <div className="min-w-0">
+                    <h3 className="font-display uppercase text-[18px] sm:text-[22px] text-white sm:group-hover:translate-x-1.5 transition-transform duration-300 leading-tight sm:leading-none break-words">
+                      {s.title}
+                    </h3>
+                    <span className="mt-1 inline-block font-mono text-[9px] tracking-widest uppercase bg-white/10 border border-white/10 text-tropic px-2 py-0.5 rounded-full">{s.tag}</span>
+                    <p className="sm:hidden mt-3 text-[13px] text-gray-400 leading-relaxed">{s.desc}</p>
+                  </div>
+                  <p className="hidden sm:block text-sm text-gray-400 leading-relaxed">{s.desc}</p>
                 </div>
-                <p className="text-sm text-gray-400 leading-relaxed">{s.desc}</p>
                 <svg className="hidden sm:block w-5 h-5 text-white/25 group-hover:text-tropic group-hover:translate-x-2 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+                <svg className="absolute right-2 top-6 sm:hidden w-4 h-4 text-white/40 group-hover:text-tropic transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </a>
