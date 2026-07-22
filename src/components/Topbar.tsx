@@ -5,7 +5,7 @@ export default function Topbar() {
     <div className="bg-tropic text-abyss">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center justify-between gap-4 font-mono text-[11px] font-bold tracking-wider">
         <p className="truncate uppercase">
-          Seg–Sáb 9h–19h <span className="hidden sm:inline">· Atendimento em todo o Brasil</span>
+          🌴 Agência local · Porto Seguro <span className="hidden sm:inline">· Buscamos no aeroporto BPS · Guia durante toda estadia</span>
         </p>
         <a
           href={wa(DEFAULT_MSG)}

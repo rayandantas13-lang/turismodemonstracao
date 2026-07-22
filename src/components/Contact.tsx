@@ -8,18 +8,14 @@ const MONTHS = [
 ];
 
 const DESTINATION_OPTIONS = [
-  "Ainda não sei — me ajudem a escolher",
-  "Fernando de Noronha",
-  "Chapada Diamantina",
-  "Maragogi",
-  "Maldivas",
-  "Nepal",
-  "Patagônia",
-  "Marrocos",
-  "Singapura",
-  "Bali",
-  "Kuala Lumpur",
-  "Outro destino",
+  "Quero pacote completo: Arraial + Trancoso + Caraiva + Coroa Vermelha",
+  "Arraial d'Ajuda",
+  "Trancoso - Quadrado e Praia do Espelho",
+  "Caraiva - com buggy/quadriciclo",
+  "Coroa Vermelha + Aldeia Pataxó",
+  "Recife de Fora - Mergulho com cilindro",
+  "Jetski e lancha privativa",
+  "Ainda não sei - me ajudem a montar",
 ];
 
 export default function Contact() {
@@ -34,11 +30,12 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const lines = [
-      `Olá! Meu nome é ${form.name}.`,
-      `📍 Destino: ${form.destination}`,
+      `Olá! Meu nome é ${form.name} 🌴`,
+      `📍 Interesse: ${form.destination}`,
       form.month ? `📅 Mês da viagem: ${form.month}` : "",
+      form.phone ? `📱 Meu whats: ${form.phone}` : "",
       form.message ? `✏️ Detalhes: ${form.message}` : "",
-      "Quero montar um roteiro com a Meridiano! ✈️",
+      "Quero fechar pacote com busca no hotel + guia local! ✈️",
     ].filter(Boolean);
     window.open(wa(lines.join("\n")), "_blank", "noopener,noreferrer");
   };
@@ -56,22 +53,20 @@ export default function Contact() {
           {/* Left — info */}
           <Reveal>
             <p className="font-mono text-[11px] font-bold tracking-[0.24em] text-tropic uppercase mb-3">
-              {"//"} 05 — Contato
+              {"//"} 05 — Contato direto
             </p>
             <h2 className="font-display uppercase text-4xl sm:text-6xl leading-[0.95] text-white mb-6">
-              Bora falar da sua
+              Bora fechar seu
               <br />
-              <span className="text-hollow-azure">próxima viagem?</span>
+              <span className="text-hollow-azure">pacote no zap?</span>
             </h2>
-            <p className="text-gray-300 max-w-lg mb-10 leading-relaxed">
-              O jeito mais rápido é pelo WhatsApp: nossa equipe responde em minutos no horário
-              comercial. Prefere preencher? O formulário ao lado também cai direto na nossa
-              conversa.
+            <p className="text-gray-300 max-w-lg mb-8 leading-relaxed">
+              Somos agência 100% local em Porto Seguro. Nada de call center. Você fala direto com quem vai te buscar no aeroporto e te levar pra Arraial, Trancoso, Caraiva e Coroa Vermelha. Resposta em minutos.
             </p>
 
             <div className="space-y-4">
               <a
-                href={wa("Olá! Vim pelo site da Meridiano e quero montar minha próxima viagem. ✈️")}
+                href={wa("Olá! Quero fechar meu pacote em Porto Seguro 🌴✈️")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-5 p-5 border border-tropic/50 bg-tropic/10 rounded-sm hover:bg-tropic/20 hover:border-tropic transition-all duration-300"
@@ -82,9 +77,9 @@ export default function Contact() {
                   </svg>
                 </span>
                 <span className="flex-1">
-                  <span className="block font-display uppercase text-xl text-white">WhatsApp</span>
+                  <span className="block font-display uppercase text-xl text-white">WhatsApp direto com guia</span>
                   <span className="block font-mono text-xs text-tropic tracking-wider">
-                    {WHATSAPP_DISPLAY} · resposta em minutos
+                    {WHATSAPP_DISPLAY} · online agora - resposta em minutos
                   </span>
                 </span>
                 <svg className="w-5 h-5 text-gray-500 group-hover:text-tropic group-hover:translate-x-1.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
@@ -109,19 +104,19 @@ export default function Contact() {
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="p-5 border border-white/15 rounded-sm">
-                  <p className="font-mono text-[10px] tracking-[0.2em] text-gray-500 uppercase mb-2">Base</p>
+                  <p className="font-mono text-[10px] tracking-[0.2em] text-gray-500 uppercase mb-2">Base local</p>
                   <p className="text-sm text-gray-300 leading-relaxed">
-                    Av. Paulista, 1000 · cj. 101
+                    Av. Beira Mar, 1000 · Arraial d'Ajuda
                     <br />
-                    São Paulo — SP · Brasil
+                    Porto Seguro — BA · Costa do Descobrimento
                   </p>
                 </div>
                 <div className="p-5 border border-white/15 rounded-sm">
-                  <p className="font-mono text-[10px] tracking-[0.2em] text-gray-500 uppercase mb-2">Horário</p>
+                  <p className="font-mono text-[10px] tracking-[0.2em] text-gray-500 uppercase mb-2">Horário & Frota</p>
                   <p className="text-sm text-gray-300 leading-relaxed">
-                    Seg–Sáb · 9h às 19h
+                    Seg–Dom · 7h às 22h
                     <br />
-                    <span className="text-tropic">Emergências: 24h</span>
+                    <span className="text-tropic">Vans, SW4 4x4, buggy, jetski</span>
                   </p>
                 </div>
               </div>
@@ -137,13 +132,13 @@ export default function Contact() {
               <div className="px-6 sm:px-9 pt-7 pb-5 flex items-center justify-between">
                 <div>
                   <p className="font-display text-lg tracking-wide">
-                    MERIDIANO<span className="text-ocean"> AIR</span>
+                    MERIDIANO<span className="text-ocean"> TOUR</span>
                   </p>
                   <p className="font-mono text-[9px] font-bold tracking-[0.22em] text-ocean uppercase">
-                    Formulário de embarque
+                    Reserva de pacote - Costa do Descobrimento
                   </p>
                 </div>
-                <span className="font-mono text-[10px] font-bold text-abyss/50">MRD·{new Date().getFullYear()}</span>
+                <span className="font-mono text-[10px] font-bold text-abyss/50">BPS·{new Date().getFullYear()}</span>
               </div>
 
               <div className="relative border-t-2 border-dashed border-abyss/25">
@@ -177,7 +172,7 @@ export default function Contact() {
                       required
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      placeholder="(11) 99999-9999"
+                      placeholder="(73) 98888-8888"
                       className={inputCls}
                     />
                   </div>
@@ -186,7 +181,7 @@ export default function Contact() {
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="c-dest" className="block font-mono text-[10px] font-bold tracking-[0.18em] uppercase text-abyss/60 mb-2">
-                      Destino sonhado
+                      Pacote desejado
                     </label>
                     <select
                       id="c-dest"
@@ -219,14 +214,14 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="c-msg" className="block font-mono text-[10px] font-bold tracking-[0.18em] uppercase text-abyss/60 mb-2">
-                    Detalhes da viagem
+                    Detalhes
                   </label>
                   <textarea
                     id="c-msg"
                     rows={4}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    placeholder="Quantas pessoas? Lua de mel, família, mochilão? Conte tudo…"
+                    placeholder="Quantas pessoas? Já tem hotel? Quer adicionar jetski, quadriciclo, mergulho?"
                     className={`${inputCls} resize-none`}
                   />
                 </div>
@@ -235,14 +230,14 @@ export default function Contact() {
                   type="submit"
                   className="w-full group bg-abyss text-tropic font-bold uppercase tracking-[0.14em] text-sm py-4 rounded-sm hover:bg-ocean hover:text-white transition-all duration-300 flex items-center justify-center gap-3"
                 >
-                  Enviar pelo WhatsApp
+                  Fechar pacote no WhatsApp
                   <svg className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>
                 </button>
 
                 <p className="font-mono text-[9px] tracking-[0.14em] text-abyss/45 uppercase text-center">
-                  * vai direto pro nosso WhatsApp ({WHATSAPP_NUMBER}) — sem spam, sem robô
+                  * vai direto pro WhatsApp ({WHATSAPP_NUMBER}) - sem spam, atendimento humano local
                 </p>
               </div>
             </form>

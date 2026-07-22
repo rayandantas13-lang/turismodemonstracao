@@ -5,6 +5,7 @@ import Ticker from "./components/Ticker";
 import Destinations from "./components/Destinations";
 import Process from "./components/Process";
 import Services from "./components/Services";
+import Fleet from "./components/Fleet";
 import Testimonials from "./components/Testimonials";
 import Stats from "./components/Stats";
 import Cta from "./components/Cta";
@@ -23,6 +24,7 @@ export default function App() {
         <Destinations />
         <Process />
         <Services />
+        <Fleet />
         <Testimonials />
         <Stats />
         <Cta />

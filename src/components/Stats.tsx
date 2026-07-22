@@ -40,10 +40,10 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 const STATS = [
-  { value: 12, suffix: "", label: "anos na estrada" },
-  { value: 8400, suffix: "+", label: "viajantes atendidos" },
-  { value: 54, suffix: "", label: "países no catálogo" },
-  { value: 98, suffix: "%", label: "viajantes que indicam" },
+  { value: 8, suffix: "", label: "anos em Porto Seguro" },
+  { value: 2800, suffix: "+", label: "famílias atendidas por ano" },
+  { value: 4, suffix: " destinos base", label: "Arraial · Trancoso · Caraiva · Coroa" },
+  { value: 100, suffix: "%", label: "equipe local + motoristas próprios" },
 ];
 
 export default function Stats() {
